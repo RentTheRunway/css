@@ -2,7 +2,7 @@
 
 *A mostly reasonable approach to CSS and Sass*
 
-Adapted from Airbnb 
+Adapted from Airbnb
 
 ## Table of Contents
 
@@ -112,10 +112,10 @@ Finally, properties are what give the selected elements of a rule declaration th
 ### Comments
 
 * Prefer line comments (`//` in Sass-land) to block comments.
-* Prefer comments on their own line. Avoid end-of-line comments.
 * Write detailed comments for code that isn't self-documenting:
   - Uses of z-index
   - Compatibility or browser-specific hacks
+  - Why the linter needs to be disabled
 
 ### OOCSS and BEM
 
