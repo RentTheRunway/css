@@ -1,0 +1,66 @@
+#########################
+## RTR Sass Lint File  ##
+#########################
+# You can either run this on the whole codebase, or use
+# the git pre-push hook to only lint files that you have
+# made alterations to.
+# Please see this confluence document: https://renttherunway.jira.com/wiki/display/EN/Storefront+Conventions+and+Best+Practices
+# for more information on Storefront CSS best practices.
+
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+  # Set the formatter to 'stylish'
+  formatter: stylish
+  # Raise an error if more than 50 warnings are generated
+  max-warnings: 50
+# File Options
+files:
+  include: 'assets/stylesheets/sass/**/*.scss'
+  ignore:
+    - 'node_modules/**/*.*'
+# Rule Configuration
+rules:
+  declarations-before-nesting: 2
+  empty-line-between-blocks: 1
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  hex-notation:
+    - 2
+    -
+      style: uppercase
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        # These are all our media query mixins
+        - short-mobile-breakpoint
+        - mobile-breakpoint
+        - tablet-breakpoint
+        - laptop-breakpoint
+        - nav-desktop-breakpoint
+        - desktop-breakpoint
+        - widescreen-breakpoint
+        - mobile-and-tablet-breakpoint
+        - tablet-and-desktop-breakpoint
+        - short-tablet-and-desktop-breakpoint
+        - desktop-not-widescreen
+        - short-device-breakpoint
+        - smaller-than-laptop-breakpoint
+        - on-load
+  nesting-depth:
+      - 1
+      -
+        max-depth: 5
+  no-css-comments: 2
+  no-debug: 1
+  no-duplicate-properties: 1
+  no-empty-rulesets: 2
+  no-ids: 2
+  no-important: 1
+  no-invalid-hex: 2
+  no-mergeable-selectors: 1
+  no-warn: 1
+  single-line-per-selector: 2
+  space-after-colon: 2
